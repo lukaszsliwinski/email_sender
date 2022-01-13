@@ -22,15 +22,10 @@ let mailOptions = {
     text: '',
 };
 
-transporter.sendMail(mailOptions, function(err, success) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log('Email was sent');
-    };
-});
-
-
+transporter
+    .sendMail(mailOptions)
+    .then(() => console.log('Email was sent'))
+    .catch((err) => console.log(err));
 
 app.set('view engine', 'hbs');
 
