@@ -5,7 +5,9 @@ const port = 3000;
 const app = express();
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
         user: '',
         pass: '',
@@ -15,7 +17,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-let mailOptions = {
+let mailDetails = {
     from: '',
     to: '',
     subject: '',
@@ -23,7 +25,7 @@ let mailOptions = {
 };
 
 transporter
-    .sendMail(mailOptions)
+    .sendMail(mailDetails)
     .then(() => console.log('Email was sent'))
     .catch((err) => console.log(err));
 
