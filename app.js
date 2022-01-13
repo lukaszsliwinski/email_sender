@@ -1,5 +1,6 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const port = 3000;
 const app = express();
@@ -29,12 +30,9 @@ transporter
     .then(() => console.log('Email was sent'))
     .catch((err) => console.log(err));
 
-app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-    res.render('index', {
-        pageTitle: 'Email sender',
-    });
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
 app.listen(port);
