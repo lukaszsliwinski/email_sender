@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
+require('dotenv').config();
 
 const port = 3000;
 const app = express();
@@ -10,8 +11,8 @@ let transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-        user: '',
-        pass: '',
+        user: process.env.SENDER,
+        pass: process.env.PASSWORD,
     },
     tls: {
         rejectUnauthorized: false,
@@ -19,8 +20,8 @@ let transporter = nodemailer.createTransport({
 });
 
 let mailDetails = {
-    from: '',
-    to: '',
+    from: process.env.SENDER,
+    to: process.env.RECIPIENT,
     subject: '',
     text: '',
 };
