@@ -1,6 +1,5 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const path = require('path');
 require('dotenv').config();
 
 const port = 3000;
@@ -26,15 +25,14 @@ let mailDetails = {
     text: '',
 };
 
-transporter
-    .sendMail(mailDetails)
-    .then(() => console.log('Email was sent'))
-    .catch((err) => console.log(err));
+// transporter
+//     .sendMail(mailDetails)
+//     .then(() => console.log('Email was sent'))
+//     .catch((err) => console.log(err));
 
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'views/index.html'));
-});
+app.use(express.static('./public'))
+
 
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
