@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email sender</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="post" action="/">
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form method="post" action="/" target="dummyframe">
         <label>TITLE:
-            <input type="text" name="title">
+            <input type="text" name="title" required>
         </label>
         <label>MESSAGE:
-            <input type="text" name="message">
+            <textarea name="message" rows="5" required></textarea>
+        </label>
+        <label>SEND TO:
+            <input type="text" name="recipient" required>
         </label>
         <input type="submit" value="SEND">
     </form>

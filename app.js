@@ -28,7 +28,7 @@ app.post('/', function(req, res) {
     
     let mailDetails = {
         from: process.env.SENDER,
-        to: process.env.RECIPIENT,
+        to: req.body.recipient,
         subject: req.body.title,
         text: req.body.message,
     };
