@@ -5,22 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email sender</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- zmienić pliki na produkcyjne -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
-    <form method="post" action="/" target="dummyframe">
-        <label>TITLE:
-            <input type="text" name="title" required>
-        </label>
-        <label>MESSAGE:
-            <textarea name="message" rows="5" required></textarea>
-        </label>
-        <label>SEND TO:
-            <input type="text" name="recipient" required>
-        </label>
-        <input type="submit" value="SEND">
-    </form>
-</script>
+    <div id="contact"></div>
+    <!-- <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe> -->
+
+    <script type="text/babel" src="./contactForm.js"></script>
 </body>
 </html>

@@ -29,8 +29,8 @@ app.post('/', function(req, res) {
     let mailDetails = {
         from: process.env.SENDER,
         to: req.body.recipient,
-        subject: req.body.title,
-        text: req.body.message,
+        subject: 'tytuł maila', //req.body.title,
+        text: 'treść maila', // req.body.message,
     };
     
     transporter
