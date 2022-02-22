@@ -12,7 +12,6 @@ app.use(bp.urlencoded({ extended: true }))
 
 
 app.post('/', function(req, res) {
-
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -29,13 +28,13 @@ app.post('/', function(req, res) {
     let mailDetails = {
         from: process.env.SENDER,
         to: req.body.recipient,
-        subject: 'tytuł maila', //req.body.title,
-        text: 'treść maila', // req.body.message,
+        subject: req.body.title,
+        text: req.body.message,
     };
     
     transporter
         .sendMail(mailDetails)
-        .then(() => console.log('Email was sent'))
+        .then(() => console.log(`Email was sent to ${req.body.recipient}`))
         .catch((err) => console.log(err));
 
     res.sendStatus(200);

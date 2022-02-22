@@ -17,8 +17,16 @@ class ContactForm extends React.Component {
     }
 
     handleSubmit(e) {
-        alert(`Email was sent to ${this.state.recipient}`);
+        axios.post('/', this.state)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         e.preventDefault();
+        alert(`Email was sent to ${this.state.recipient}`);
+        window.location.reload()
     }
 
     render() {
