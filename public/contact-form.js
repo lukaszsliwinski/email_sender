@@ -34,7 +34,7 @@ class ContactForm extends React.Component {
             <section class="app">
                 <div class="container py-5">
                     <div class="row mx-0">
-                        <div class="col-lg-4 mx-auto">
+                        <div class="col-lg-6 mx-auto">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row mx-0">

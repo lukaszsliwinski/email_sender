@@ -1,42 +1,26 @@
+/* Define colors */
 :root {
+    --transparent-background: rgb(255, 255, 255, 0.8);
     --main-color: rgba(0,0,120,0.9);
     --input-border: rgb(204, 204, 204);
-    --transparent-background: rgb(255, 255, 255, 0.8);
 }
 
 
+/* Reset default properties */
 * {
     margin: 0;
-    padding: 0;
-    max-width: 100%;
     box-sizing: border-box;
-    -webkit-font-smoothing: subpixel-antialiased;
+    max-width: 100%;
+    padding: 0;
 }
 
-.input-area {
-    display: block;
-    border: 0;
-    outline: none;
-    width: 100%;
-    padding: 7px 0;
-    border-bottom: 1.5px solid var(--input-border);
-    background-color: transparent;
-}
 
-.input-area:focus {
-    border-bottom: 1.5px solid var(--main-color);
-    transition: border-bottom 0.4s;
-}
-
-textarea {
-    resize: none;
-}
-
+/* Backgrounds */
 .app {
+    height: 100vh;
     background: url(./background.jpg) no-repeat;
     background-size: auto 100%;
     background-position-x: center;
-    height: 100vh;
 }
 
 .card {
@@ -44,22 +28,44 @@ textarea {
 }
 
 .head {
-    background-color: var(--main-color);
-    border-radius: 5px;
     -webkit-box-shadow: 10px 10px 40px -15px var(--main-color);
     -moz-box-shadow: 10px 10px 40px -15px var(--main-color);
     box-shadow: 10px 10px 40px -15px var(--main-color);
+    border-radius: 5px;
+    background-color: var(--main-color);
 }
 
 
+/* Input areas */
+.input-area {
+    display: block;
+    outline: none;
+    border: 0;
+    border-bottom: 1.5px solid var(--input-border);
+    width: 100%;
+    padding: 7px 0;
+    background-color: transparent;
+}
+
+.input-area:focus {
+    transition: border-bottom 0.4s;
+    border-bottom: 1.5px solid var(--main-color);
+}
+
+textarea {
+    resize: none;
+}
+
+
+/* Submit button */
 .btn {
     display: block;
-    width: 30%;
-    background: var(--main-color);
-    color: white;
     outline: none;
     border: none;
     border-radius: 5px;
+    width: 30%;
+    background: var(--main-color);
+    color: white;
 }
 
 .btn:hover {
