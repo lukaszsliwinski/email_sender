@@ -1,7 +1,67 @@
-label, input, textarea {
+:root {
+    --main-color: rgba(0,0,120,0.9);
+    --input-border: rgb(204, 204, 204);
+    --transparent-background: rgb(255, 255, 255, 0.8);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.input-area {
     display: block;
+    border: 0;
+    outline: none;
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 1.5px solid var(--input-border);
+    background-color: transparent;
+}
+
+.input-area:focus {
+    border-bottom: 1.5px solid var(--main-color);
+    transition: border-bottom 0.4s;
 }
 
 textarea {
     resize: none;
+}
+
+.app {
+    background: url(./background.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--transparent-background);
+}
+
+.head {
+    background-color: var(--main-color);
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 40px -15px var(--main-color);
+    -moz-box-shadow: 10px 10px 40px -15px var(--main-color);
+    box-shadow: 10px 10px 40px -15px var(--main-color);
+}
+
+
+.btn {
+    display: block;
+    width: 30%;
+    background: var(--main-color);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: lightblue;
 }
