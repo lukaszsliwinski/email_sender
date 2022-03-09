@@ -13,7 +13,7 @@ Bootstrap 5
 
 ## Setup and run (Windows)
 1 Install Node.js v.16 from website:<br>
-&emsp;https://nodejs.org/en/download/<br>
+&emsp;https://nodejs.org/en/download/<br><br>
 2 Download repository
 ```bash
 git clone https://github.com/lukaszsliwinski/email_sender
@@ -39,4 +39,4 @@ Assign an email address and password from the account that will be the sender. I
 ```bash
 node app.js
 ```
-8 Enter https://127.0.0.1:3000 in browser to run the app
+8 Enter 'localhost:3000' in browser to run the app
