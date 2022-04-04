@@ -3,6 +3,9 @@
 ## About
 Application for sending e-mail to any address. My first application using Node.js on backend and React on frontend.
 
+## Demo
+https://emailsenderportfolio.herokuapp.com/
+
 ## Used technologies
 JavaScript<br>
 Node.js 16<br>
@@ -11,7 +14,7 @@ HTML5<br>
 CSS3<br>
 Bootstrap 5
 
-## Setup and run (Windows)
+## Setup and run on localhost (Windows)
 1 Install Node.js v.16 from website:<br>
 &emsp;https://nodejs.org/en/download/<br><br>
 2 Download repository

@@ -12,4 +12,3 @@ app.use(bp.urlencoded({ extended: true }))
 app.post('/', email);
 
 app.listen(port);
-// console.log('Server started at http://localhost:' + port);
