@@ -1,7 +1,7 @@
 # Email sender
 
 ## About
-Application for sending e-mail to any address. My first application using Node.js on backend and React on frontend.
+Application for sending e-mail to any address. My first application using Node.js on backend and React on frontend. The app uses previously set outlook account and password to send a message.
 
 ## Demo
 https://emailsenderportfolio.herokuapp.com/
@@ -31,15 +31,12 @@ npm install
 ```
 5 Create .env file in main directory. In this file, create two variables:
 ```bash
-SENDER = 'address@gmail.com'
+SENDER = 'address@outlook.com'
 PASSWORD = 'password'
 ```
-Assign an email address and password from the account that will be the sender. Important: the app is configured for gmail accounts.<br><br>
-6 On sender's gmail account set the 'less secure app access' as 'on'.<br>
-&emsp;For more information go to:<br>
-&emsp;https://support.google.com/accounts/answer/6010255?hl=en<br><br>
-7 Run application on localhost
+Assign an email address and password from the account that will be the sender. Important: the app is configured for outlook accounts.<br><br>
+6 Run application on localhost
 ```bash
 node app.js
 ```
-8 Enter 'localhost:3000' in browser to run the app
+7 Enter 'localhost:3000' in browser to run the app

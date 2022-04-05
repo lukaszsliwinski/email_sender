@@ -3,7 +3,8 @@ require('dotenv').config();
 
 email = (req, res) => {
     let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        host: 'smtp.office365.com',
+        service: 'office365',
         port: 587,
         secure: false,
         auth: {
